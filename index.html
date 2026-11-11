@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANNAM – Share Food, Spread Hope</title>
+  <meta name="description" content="Reduce food waste and fight hunger by connecting food donors, volunteers, NGOs, shelters, and people in need across India." />
+  <meta property="og:title" content="ANNAM – Share Food, Spread Hope" />
+  <meta property="og:description" content="Reduce food waste and fight hunger by connecting food donors, volunteers, NGOs, shelters, and people in need." />
+  <meta property="og:image" content="assets/images/hero-food.jpg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="brand-link">
+        <svg class="brand-logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#EBF6EE" stroke="#228B45" stroke-width="3"/>
+          <path d="M22 64C22 64 34 76 50 76C66 76 78 64 78 64" stroke="#228B45" stroke-width="4" stroke-linecap="round"/>
+          <path d="M28 50C28 62 72 62 72 50C72 48 28 48 28 50Z" fill="#FF9F32"/>
+          <ellipse cx="50" cy="48" rx="22" ry="5" fill="#E6851C"/>
+          <path d="M50 22C44 28 42 36 50 42C58 36 56 28 50 22Z" fill="#228B45"/>
+          <path d="M38 28C34 32 34 38 40 42C44 38 43 32 38 28Z" fill="#2FC060"/>
+          <path d="M62 28C66 32 66 38 60 42C56 38 57 32 62 28Z" fill="#2FC060"/>
+        </svg>
+        <div>
+          <span class="brand-title">ANNAM</span>
+          <span class="brand-tagline-micro">Share Food · Spread Hope</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item active">Home</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#how-it-works" class="nav-item">How It Works</a>
+        <a href="tracking.html" class="nav-item">Live Tracker</a>
+        <a href="impact.html" class="nav-item">Social Impact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Log In</a>
+        <a href="register.html" class="btn btn-primary btn-sm">Join ANNAM</a>
+        <button class="nav-hamburger" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-kicker">
+            <span class="hero-kicker-dot"></span>
+            <span>Zero Waste · Zero Hunger Initiative</span>
+          </div>
+          <h1 class="hero-title">
+            Don't Waste Food. <br />
+            <span class="highlight-green">Share Hope.</span>
+          </h1>
+          <p class="hero-description">
+            Every meal deserves a home. Join ANNAM to connect surplus food from marriage halls, hotels, restaurants, and events with people who need it most.
+          </p>
+          <div class="hero-actions">
+            <a href="donor.html" class="btn btn-primary btn-lg">Donate Food ➔</a>
+            <a href="recipient.html" class="btn btn-secondary btn-lg">Find Food for Shelters</a>
+            <a href="volunteer.html" class="btn btn-outline btn-lg">Become a Courier</a>
+          </div>
+          <div style="display:flex; align-items:center; gap: 16px; font-size: 0.875rem; color: var(--text-muted);">
+            <span>🛡️ 5-Point Safety Verified</span>
+            <span>·</span>
+            <span>⚡ Average 45 Min Pickup</span>
+            <span>·</span>
+            <span>📍 Real-Time Tracking</span>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <img src="assets/images/hero-food.jpg" alt="Indian food donation distribution by caring volunteers" class="hero-img" />
+          <div class="hero-media-badge">
+            <div>
+              <div class="hero-badge-title">Community Food Relief Network</div>
+              <div class="hero-badge-meta">Connecting donors, couriers & shelters in real time</div>
+            </div>
+            <a href="tracking.html" class="btn btn-primary btn-sm">Live Rescues ➔</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Statistics Counter -->
+    <section class="stats-strip">
+      <div class="stats-container">
+        <div class="stat-item">
+          <div class="stat-number tabular-nums">12,500+</div>
+          <div class="stat-label">Meals Saved</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number tabular-nums">250+</div>
+          <div class="stat-label">Food Donors</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number tabular-nums">500+</div>
+          <div class="stat-label">Active Volunteers</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number tabular-nums">45+</div>
+          <div class="stat-label">Partner NGOs</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <span class="section-kicker">Our Purpose</span>
+        <h2 class="section-title">Nourishing Communities Through Rapid Food Logistics</h2>
+        <p class="section-subtitle">
+          Over 68 million tonnes of food is wasted annually in India, while millions remain food insecure. ANNAM bridges this gap through a community-driven technology platform that matches fresh surplus food with local orphanages, elderly homes, and community shelters within hours of preparation.
+        </p>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 28px;">
+        <div class="card" style="padding: 32px;">
+          <div style="font-size: 2rem; margin-bottom: 16px;">🏛️</div>
+          <h3 style="font-size: 1.25rem; font-weight:800; margin-bottom: 10px;">Banquet & Catering Surplus</h3>
+          <p style="font-size: 0.9375rem; color:var(--text-muted); line-height: 1.6;">
+            Marriage halls, caterers, and corporate dining halls can list 50 to 500+ untouched meals in under 60 seconds with safe consumption deadlines.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 32px;">
+          <div style="font-size: 2rem; margin-bottom: 16px;">🚴</div>
+          <h3 style="font-size: 1.25rem; font-weight:800; margin-bottom: 10px;">Volunteer Courier Fleet</h3>
+          <p style="font-size: 0.9375rem; color:var(--text-muted); line-height: 1.6;">
+            Local volunteers receive instant dispatch notifications, complete physical food safety inspections, and transport hot meals directly to beneficiaries.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 32px;">
+          <div style="font-size: 2rem; margin-bottom: 16px;">🛡️</div>
+          <h3 style="font-size: 1.25rem; font-weight:800; margin-bottom: 10px;">Certified Food Safety</h3>
+          <p style="font-size: 0.9375rem; color:var(--text-muted); line-height: 1.6;">
+            We strictly enforce a 5-point physical verification protocol covering thermal integrity, packaging condition, odor, and consumption limits before handoff.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works – 5-Step Process -->
+    <section id="how-it-works" class="section" style="background: var(--bg-card); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="section-header">
+        <span class="section-kicker">Transparent Methodology</span>
+        <h2 class="section-title">The Five-Step Food Rescue Cycle</h2>
+        <p class="section-subtitle">
+          From the dining hall to the recipient shelter in five seamless, verified stages.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="process-step-num">1</div>
+          <h3 class="process-step-name">ALERT</h3>
+          <p class="process-step-desc">
+            A donor (wedding hall, hotel, or caterer) creates an immediate surplus alert specifying meal count, prep time, and pickup address.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step-num">2</div>
+          <h3 class="process-step-name">MATCH</h3>
+          <p class="process-step-desc">
+            Our smart routing algorithm immediately alerts nearby verified NGOs and assigns an active volunteer courier in the local radius.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step-num">3</div>
+          <h3 class="process-step-name">SAFETY CHECK</h3>
+          <p class="process-step-desc">
+            The volunteer arrives on-site and inspects temperature, packaging integrity, and smell against our mandatory 5-point checklist before sealing.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step-num">4</div>
+          <h3 class="process-step-name">DELIVER</h3>
+          <p class="process-step-desc">
+            The meal packets are transported promptly in insulated containers to the shelter with live GPS status updates visible to all parties.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="process-step-num">5</div>
+          <h3 class="process-step-name">TRANSPARENCY</h3>
+          <p class="process-step-desc">
+            The shelter confirms receipt with a digital signature, generating an immutable audit receipt and updating collective social impact metrics.
+          </p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="tracking.html" class="btn btn-primary">Experience Live Tracking Flow ➔</a>
+      </div>
+    </section>
+
+    <!-- Live Available Rescues Showcase -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-kicker">Live Surplus Feed</span>
+        <h2 class="section-title">Real-Time Food Rescue Missions</h2>
+        <p class="section-subtitle">
+          See recent surplus listings ready for immediate volunteer pickup or shelter request.
+        </p>
+      </div>
+
+      <div class="showcase-grid">
+        <!-- Card 1 -->
+        <div class="food-card">
+          <div class="food-card-img-wrap">
+            <img src="assets/images/marriage-feast.jpg" alt="Wedding Feast Meals" class="food-card-img" />
+            <span class="food-card-badge status-badge available">Available</span>
+            <span class="food-card-category">Cooked Meals</span>
+          </div>
+          <div class="food-card-body">
+            <h4 class="food-card-title">100 Vegetarian Meal Packets</h4>
+            <div class="food-card-meta">
+              <div class="food-meta-row"><strong>From:</strong> <span>Grand Chola Palace, Chennai</span></div>
+              <div class="food-meta-row"><strong>Quantity:</strong> <span>100 Packets (Sambar Rice, Poriyal, Chapati)</span></div>
+              <div class="food-meta-row"><strong>Safe Consumption:</strong> <span style="color:var(--primary); font-weight:600;">5h remaining</span></div>
+            </div>
+            <div class="food-card-footer">
+              <div class="meal-count-badge">🍽️ 100 Meals</div>
+              <a href="volunteer.html" class="btn btn-outline btn-sm">Volunteer Pickup</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="food-card">
+          <div class="food-card-img-wrap">
+            <img src="assets/images/fruit-produce.jpg" alt="Fresh Fruit Crates" class="food-card-img" />
+            <span class="food-card-badge status-badge in-transit">In Transit</span>
+            <span class="food-card-category">Fresh Produce</span>
+          </div>
+          <div class="food-card-body">
+            <h4 class="food-card-title">30 Fresh Fruit Boxes</h4>
+            <div class="food-card-meta">
+              <div class="food-meta-row"><strong>From:</strong> <span>Spice Garden Bistro, Bengaluru</span></div>
+              <div class="food-meta-row"><strong>Courier:</strong> <span>Arjun Subramaniam</span></div>
+              <div class="food-meta-row"><strong>Heading To:</strong> <span>Asha Deepam Community Kitchen</span></div>
+            </div>
+            <div class="food-card-footer">
+              <div class="meal-count-badge">🍎 90 Meals</div>
+              <a href="tracking.html?id=DON-103" class="btn btn-outline btn-sm">Track Courier</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="food-card">
+          <div class="food-card-img-wrap">
+            <img src="assets/images/ngo-distribution.jpg" alt="Community Meal Distribution" class="food-card-img" />
+            <span class="food-card-badge status-badge delivered">Delivered</span>
+            <span class="food-card-category">Community Relieved</span>
+          </div>
+          <div class="food-card-body">
+            <h4 class="food-card-title">75 Fresh Lunch Packets</h4>
+            <div class="food-card-meta">
+              <div class="food-meta-row"><strong>Donor:</strong> <span>Saravana Heritage Hotel, Coimbatore</span></div>
+              <div class="food-meta-row"><strong>Recipient:</strong> <span>Akshaya Shelter Orphanage</span></div>
+              <div class="food-meta-row"><strong>Verification:</strong> <span style="color:var(--primary); font-weight:700;">✓ 100% Received</span></div>
+            </div>
+            <div class="food-card-footer">
+              <div class="meal-count-badge">🍱 75 Meals</div>
+              <a href="tracking.html?id=DON-104" class="btn btn-outline btn-sm">Audit Receipt</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" style="background: var(--bg-card); border-top: 1px solid var(--border-subtle);">
+      <div class="section-header">
+        <span class="section-kicker">Voices of Impact</span>
+        <h2 class="section-title">Trusted by Donors, Volunteers, and Shelters</h2>
+        <p class="section-subtitle">
+          Real stories from community partners making zero food waste a daily reality.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            "We host over 50 large wedding receptions every year. Seeing surplus fresh food reach hungry families in under an hour rather than being discarded brings true peace of mind to us and the wedding hosts."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RV</div>
+            <div>
+              <div class="author-name">R. Venkatraman</div>
+              <div class="author-role">General Manager, Grand Chola Banquet Hall, Chennai</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            "The 5-point food safety checklist is what makes ANNAM stand out. As a volunteer, I never have to guess whether food is fresh or well-sealed. Every pickup is dignified, structured, and rapid."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">KR</div>
+            <div>
+              <div class="author-name">Kavitha Ramanathan</div>
+              <div class="author-role">Lead Food Courier Volunteer, Anna Nagar</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            "Our shelter provides shelter and care to 140 orphan children and senior citizens. Receiving high-quality hot meals from verified donors allows us to redirect funds towards healthcare and education."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SM</div>
+            <div>
+              <div class="author-name">Sister Mary Nirmala</div>
+              <div class="author-role">Director, Akshaya Shelter Home, Mylapore</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="48" fill="#228B45" stroke="#FFFFFF" stroke-width="3"/>
+            <path d="M22 64C22 64 34 76 50 76C66 76 78 64 78 64" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+            <path d="M28 50C28 62 72 62 72 50C72 48 28 48 28 50Z" fill="#FF9F32"/>
+            <path d="M50 22C44 28 42 36 50 42C58 36 56 28 50 22Z" fill="#FFFFFF"/>
+          </svg>
+          <span class="footer-logo-title">ANNAM</span>
+        </div>
+        <p class="footer-desc">
+          Share Food, Spread Hope. Dedicated to eliminating hunger and preventing surplus food waste across urban India through swift, transparent community coordination.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Portals</h4>
+        <ul class="footer-links">
+          <li><a href="donor.html" class="footer-link">Food Donor Dashboard</a></li>
+          <li><a href="volunteer.html" class="footer-link">Volunteer Courier Hub</a></li>
+          <li><a href="recipient.html" class="footer-link">NGO / Shelter Portal</a></li>
+          <li><a href="tracking.html" class="footer-link">Live Donation Tracker</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Platform</h4>
+        <ul class="footer-links">
+          <li><a href="impact.html" class="footer-link">Social Impact Metrics</a></li>
+          <li><a href="login.html" class="footer-link">User Login</a></li>
+          <li><a href="register.html" class="footer-link">Register New Account</a></li>
+          <li><a href="#how-it-works" class="footer-link">5-Stage Methodology</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Emergency Helpline</h4>
+        <p style="font-size: 0.875rem; color:#94A3B8; line-height: 1.6; margin-bottom: 12px;">
+          Surplus food dispatch assistance:
+        </p>
+        <p style="font-size: 1.125rem; font-weight:800; color:var(--secondary);">
+          1800-425-ANNAM
+        </p>
+        <p style="font-size: 0.8125rem; color:#64748B; margin-top: 8px;">
+          support@annamfood.org<br />
+          Chennai · Bengaluru · Coimbatore
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 ANNAM Foundation. All rights reserved. Built for College Hackathon Showcase.</div>
+      <div>Prototype LocalStorage Mode · Zero Third-Party Tracker · Pure HTML5, CSS3, & Vanilla JS</div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

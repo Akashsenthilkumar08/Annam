@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NGO & Shelter Portal – ANNAM</title>
+  <meta name="description" content="Browse and request fresh surplus food donations for orphanages and shelters." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="brand-link">
+        <svg class="brand-logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#EBF6EE" stroke="#228B45" stroke-width="3"/>
+          <path d="M22 64C22 64 34 76 50 76C66 76 78 64 78 64" stroke="#228B45" stroke-width="4" stroke-linecap="round"/>
+          <path d="M28 50C28 62 72 62 72 50C72 48 28 48 28 50Z" fill="#FF9F32"/>
+          <path d="M50 22C44 28 42 36 50 42C58 36 56 28 50 22Z" fill="#228B45"/>
+        </svg>
+        <div>
+          <span class="brand-title">ANNAM</span>
+          <span class="brand-tagline-micro">NGO Beneficiary Hub</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="donor.html" class="nav-item">Donor Portal</a>
+        <a href="volunteer.html" class="nav-item">Volunteer Hub</a>
+        <a href="recipient.html" class="nav-item active">NGO Portal</a>
+        <a href="tracking.html" class="nav-item">Tracking</a>
+        <a href="impact.html" class="nav-item">Impact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="user-profile-badge">
+          <div class="user-avatar-circle" style="background:#2563EB;">🏢</div>
+          <span id="ngo-name-display">Akshaya Shelter</span>
+        </div>
+        <button class="btn btn-outline btn-sm" onclick="logoutUser()">Log Out</button>
+        <button class="nav-hamburger" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dashboard Layout -->
+  <div class="dashboard-layout">
+    
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-user-card">
+        <div class="user-avatar-circle" style="width:36px; height:36px; font-size:1rem; background:#2563EB;">AS</div>
+        <div style="overflow:hidden;">
+          <div class="sidebar-user-name" id="ngo-sidebar-name">Akshaya Shelter</div>
+          <div class="sidebar-user-role" style="color:#2563EB;">Registered NGO</div>
+        </div>
+      </div>
+
+      <ul class="sidebar-nav">
+        <li>
+          <button class="sidebar-btn active ngo-tab-btn" data-ngo-tab="browse">
+            <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <span>Browse Donations</span>
+          </button>
+        </li>
+        <li>
+          <button class="sidebar-btn ngo-tab-btn" data-ngo-tab="requests">
+            <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+            </svg>
+            <span>My Meal Requests</span>
+          </button>
+        </li>
+        <li>
+          <a href="tracking.html" class="sidebar-btn">
+            <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
+              <line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/>
+            </svg>
+            <span>Live Delivery Status</span>
+          </a>
+        </li>
+        <li>
+          <button class="sidebar-btn" onclick="showToast('Notification: 50 Rice Meal Packets from Saravana Hotel are in transit.', 'info')">
+            <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+            <span>Shelter Alerts (1)</span>
+          </button>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <a href="index.html" class="sidebar-btn" style="color:var(--text-light);">
+          <span>← Back to Homepage</span>
+        </a>
+        <button class="sidebar-btn" onclick="logoutUser()" style="color:#DC2626;">
+          <span>Log Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-content">
+      
+      <div class="dashboard-header">
+        <div>
+          <h1 class="dashboard-title">Shelter & NGO Food Requisition</h1>
+          <p class="dashboard-subtitle">
+            Facility: <span id="ngo-location-display" style="font-weight:600; color:var(--text-main);">Mylapore, Chennai</span> · Serving 140 Resident Beneficiaries
+          </p>
+        </div>
+
+        <div style="display:flex; gap:10px;">
+          <button class="btn btn-primary btn-sm ngo-tab-btn" data-ngo-tab="browse">Browse Surplus Food</button>
+          <button class="btn btn-outline btn-sm ngo-tab-btn" data-ngo-tab="requests">My Requests & Receipts</button>
+        </div>
+      </div>
+
+      <!-- Statistics KPI Grid -->
+      <section class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-icon-wrap blue">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          </div>
+          <div>
+            <div class="kpi-value tabular-nums" id="stat-active-requests">0</div>
+            <div class="kpi-label">Active Requests</div>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-icon-wrap green">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <div>
+            <div class="kpi-value tabular-nums" id="stat-meals-received">0</div>
+            <div class="kpi-label">Meals Received</div>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-icon-wrap orange">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <div>
+            <div class="kpi-value tabular-nums" id="stat-available-browse">0</div>
+            <div class="kpi-label">Available for Request</div>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-icon-wrap purple">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div>
+            <div class="kpi-value tabular-nums" id="stat-completed-deliveries">0</div>
+            <div class="kpi-label">Confirmed Deliveries</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- View: Browse Available Surplus -->
+      <section id="view-browse">
+        
+        <!-- Filter and Search Bar -->
+        <div class="filter-bar">
+          <div class="search-input-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="recipient-search" class="form-input" placeholder="Search food items, banquet halls, or dishes..." />
+          </div>
+
+          <div style="min-width: 180px;">
+            <select id="recipient-cat-filter" class="form-select">
+              <option value="all">All Categories</option>
+              <option value="Cooked Meals">Cooked Meals</option>
+              <option value="Fresh Produce">Fresh Produce & Fruits</option>
+              <option value="Bakery">Bakery & Breads</option>
+              <option value="Snacks">Snacks & Savories</option>
+            </select>
+          </div>
+
+          <div style="min-width: 160px;">
+            <select id="recipient-loc-filter" class="form-select">
+              <option value="all">All Locations</option>
+              <option value="Chennai">Chennai</option>
+              <option value="Bengaluru">Bengaluru</option>
+              <option value="Coimbatore">Coimbatore</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Available Food Grid -->
+        <div id="browse-donations-grid" class="showcase-grid"></div>
+      </section>
+
+      <!-- View: My Requests & Received Confirmation -->
+      <section id="view-requests" style="display:none;">
+        <div style="margin-bottom: 20px;">
+          <h3 style="font-size: 1.25rem; font-weight:800; color:var(--text-main);">My Food Requisitions & Received Confirmations</h3>
+          <p style="font-size: 0.875rem; color:var(--text-muted);">
+            Track meals matched to your shelter. Once a volunteer completes the drop-off, click "Confirm Received" to finalize the audit receipt.
+          </p>
+        </div>
+        <div id="my-requests-grid" style="display:flex; flex-direction:column; gap: 20px;"></div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/recipient.js"></script>
+</body>
+</html>

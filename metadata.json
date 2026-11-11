@@ -1,0 +1,6 @@
+{
+  "name": "ANNAM – Share Food, Spread Hope",
+  "description": "Social-impact food rescue platform connecting food donors, volunteers, and NGOs to eliminate food waste and nourish communities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login – ANNAM Food Rescue</title>
+  <meta name="description" content="Sign in to your ANNAM food donation portal." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body style="background: linear-gradient(135deg, #F8FAF5 0%, #EBF6EE 100%);">
+
+  <main style="min-height: calc(100vh - 40px); display: flex; align-items: center; justify-content: center; padding: 24px;">
+    <div class="card" style="max-width: 480px; width: 100%; padding: 40px; box-shadow: var(--shadow-lg);">
+      
+      <div style="text-align: center; margin-bottom: 28px;">
+        <a href="index.html" style="display:inline-flex; align-items:center; gap: 8px; margin-bottom: 16px;">
+          <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="48" fill="#EBF6EE" stroke="#228B45" stroke-width="3"/>
+            <path d="M22 64C22 64 34 76 50 76C66 76 78 64 78 64" stroke="#228B45" stroke-width="4" stroke-linecap="round"/>
+            <path d="M28 50C28 62 72 62 72 50C72 48 28 48 28 50Z" fill="#FF9F32"/>
+            <path d="M50 22C44 28 42 36 50 42C58 36 56 28 50 22Z" fill="#228B45"/>
+          </svg>
+          <span style="font-size: 1.75rem; font-weight: 800; color: var(--primary); letter-spacing:-0.02em;">ANNAM</span>
+        </a>
+        <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--text-main); margin-bottom: 6px;">Sign In to Your Portal</h2>
+        <p style="font-size: 0.875rem; color: var(--text-muted);">Share Food, Spread Hope across our community</p>
+      </div>
+
+      <!-- Hackathon Prototype Notice -->
+      <div style="background: var(--bg-card-subtle); border: 1px dashed var(--border-strong); border-radius: var(--radius-md); padding: 14px; margin-bottom: 24px;">
+        <div style="font-size: 0.75rem; font-weight: 700; color: var(--primary); text-transform: uppercase; margin-bottom: 6px; display:flex; align-items:center; gap:4px;">
+          <span>⚡ College Hackathon Quick Sign-in</span>
+        </div>
+        <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 10px;">
+          Click any role below to immediately log in with realistic preloaded data:
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <button class="btn btn-outline btn-sm" style="width: 100%; justify-content: flex-start;" data-demo-role="donor">
+            👨‍🍳 <strong>Food Donor</strong> – Grand Chola Banquet Hall
+          </button>
+          <button class="btn btn-outline btn-sm" style="width: 100%; justify-content: flex-start;" data-demo-role="volunteer">
+            🚴 <strong>Volunteer Courier</strong> – Kavitha Ramanathan
+          </button>
+          <button class="btn btn-outline btn-sm" style="width: 100%; justify-content: flex-start;" data-demo-role="ngo">
+            🏢 <strong>NGO Shelter</strong> – Akshaya Orphanage & Home
+          </button>
+        </div>
+        <div style="font-size: 0.6875rem; color: var(--text-light); margin-top: 8px; text-align:center;">
+          *Prototype authentication uses browser LocalStorage for sandbox demonstration.
+        </div>
+      </div>
+
+      <!-- Login Form -->
+      <form id="login-form">
+        <div id="login-error" style="display:none; background:#FEE2E2; border:1px solid #F87171; color:#991B1B; padding:10px 14px; border-radius:var(--radius-sm); font-size:0.8125rem; margin-bottom:16px;"></div>
+
+        <div class="form-group">
+          <label class="form-label" for="login-email">Email Address</label>
+          <input type="email" id="login-email" class="form-input" placeholder="e.g. donor@grandchola.com" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="login-password">Password</label>
+          <input type="password" id="login-password" class="form-input" placeholder="Enter your password (or 'demo')" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px; justify-content:center;">
+          Sign In to Dashboard
+        </button>
+      </form>
+
+      <div style="margin-top: 24px; text-align: center; font-size: 0.875rem; color: var(--text-muted); border-top: 1px solid var(--border-subtle); padding-top: 20px;">
+        Don't have an account yet? <a href="register.html" style="color: var(--primary); font-weight: 700;">Register as Partner</a>
+      </div>
+
+      <div style="margin-top: 12px; text-align: center;">
+        <a href="index.html" style="font-size: 0.8125rem; color: var(--text-light);">← Back to Homepage</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

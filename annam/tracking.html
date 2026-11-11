@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live Donation Tracking – ANNAM</title>
+  <meta name="description" content="Real-time 5-stage donation progress tracking with food safety and transparent chain of custody." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Navbar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="brand-link">
+        <svg class="brand-logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="48" fill="#EBF6EE" stroke="#228B45" stroke-width="3"/>
+          <path d="M22 64C22 64 34 76 50 76C66 76 78 64 78 64" stroke="#228B45" stroke-width="4" stroke-linecap="round"/>
+          <path d="M28 50C28 62 72 62 72 50C72 48 28 48 28 50Z" fill="#FF9F32"/>
+          <ellipse cx="50" cy="48" rx="22" ry="5" fill="#E6851C"/>
+          <path d="M50 22C44 28 42 36 50 42C58 36 56 28 50 22Z" fill="#228B45"/>
+        </svg>
+        <div>
+          <span class="brand-title">ANNAM</span>
+          <span class="brand-tagline-micro">Live Dispatch Engine</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="donor.html" class="nav-item">Donor Portal</a>
+        <a href="volunteer.html" class="nav-item">Volunteer Hub</a>
+        <a href="recipient.html" class="nav-item">NGO Portal</a>
+        <a href="tracking.html" class="nav-item active">Live Tracking</a>
+        <a href="impact.html" class="nav-item">Impact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="index.html" class="btn btn-outline btn-sm">Home</a>
+        <a href="donor.html" class="btn btn-primary btn-sm">+ New Donation</a>
+        <button class="nav-hamburger" aria-label="Toggle navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main style="max-width: 1200px; margin: 0 auto; padding: 36px 24px 64px;">
+    
+    <!-- Tracking Selector & Lookup Header -->
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap: 20px; margin-bottom: 32px;">
+      <div>
+        <span class="hero-kicker" style="margin-bottom:6px;">
+          <span class="hero-kicker-dot"></span>
+          <span>End-to-End Chain of Custody</span>
+        </span>
+        <h1 style="font-size: 2.25rem; font-weight:800; color:var(--text-main); letter-spacing:-0.02em;">
+          Live Donation Progress Tracker
+        </h1>
+        <p style="font-size: 0.9375rem; color:var(--text-muted);">
+          Monitor every surplus donation through its five lifecycle phases: ALERT, MATCH, SAFETY CHECK, DELIVER, and TRANSPARENCY.
+        </p>
+      </div>
+
+      <!-- Quick Selector and Search -->
+      <div style="display:flex; gap: 12px; flex-wrap:wrap; align-items:center;">
+        <div>
+          <label style="font-size:0.75rem; font-weight:700; color:var(--text-muted); display:block; margin-bottom:4px;">SELECT MISSION</label>
+          <select id="tracking-select-donation" class="form-select" style="min-width: 280px;"></select>
+        </div>
+
+        <div>
+          <label style="font-size:0.75rem; font-weight:700; color:var(--text-muted); display:block; margin-bottom:4px;">SEARCH BY ID</label>
+          <div style="display:flex; gap:6px;">
+            <input type="text" id="tracking-search-id" class="form-input" placeholder="e.g. DON-101" style="width: 130px; text-transform:uppercase;" />
+            <button id="tracking-search-btn" class="btn btn-outline btn-sm">Track</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dynamic Tracking Content Generated via tracking.js -->
+    <div id="tracking-content-area"></div>
+
+    <!-- Five-Stage Guide Legend -->
+    <div class="card" style="margin-top: 32px; background: var(--bg-card-subtle);">
+      <h3 style="font-size: 1.125rem; font-weight: 800; margin-bottom: 12px; color: var(--text-main);">
+        About the 5-Stage Verification Architecture
+      </h3>
+      <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap: 16px; font-size: 0.8125rem; color: var(--text-muted);">
+        <div>
+          <strong style="color:var(--text-main); display:block; margin-bottom:4px;">1. ALERT</strong>
+          Food donor logs surplus meals, cooking time, and safe consumption cutoffs.
+        </div>
+        <div>
+          <strong style="color:var(--text-main); display:block; margin-bottom:4px;">2. MATCH</strong>
+          Smart location match connects the nearest active volunteer and recipient NGO.
+        </div>
+        <div>
+          <strong style="color:var(--text-main); display:block; margin-bottom:4px;">3. SAFETY CHECK</strong>
+          Volunteer physically executes the mandatory 5-point FSSAI inspection checklist.
+        </div>
+        <div>
+          <strong style="color:var(--text-main); display:block; margin-bottom:4px;">4. DELIVER</strong>
+          Safe transit in thermal packaging with GPS courier monitoring.
+        </div>
+        <div>
+          <strong style="color:var(--text-main); display:block; margin-bottom:4px;">5. TRANSPARENCY</strong>
+          Shelter confirms receipt, certifying meal dignity and environmental carbon offset.
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="footer-logo-wrap">
+          <svg width="28" height="28" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="48" fill="#228B45" stroke="#FFFFFF" stroke-width="3"/>
+            <path d="M22 64C22 64 34 76 50 76C66 76 78 64 78 64" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+            <path d="M28 50C28 62 72 62 72 50C72 48 28 48 28 50Z" fill="#FF9F32"/>
+            <path d="M50 22C44 28 42 36 50 42C58 36 56 28 50 22Z" fill="#FFFFFF"/>
+          </svg>
+          <span class="footer-logo-title">ANNAM</span>
+        </div>
+        <p class="footer-desc">
+          Live Tracking Engine for Food Waste Prevention. Transparently verifying meal handoffs from banquet halls to shelter dining tables.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Portals</h4>
+        <ul class="footer-links">
+          <li><a href="donor.html" class="footer-link">Donor Portal</a></li>
+          <li><a href="volunteer.html" class="footer-link">Volunteer Hub</a></li>
+          <li><a href="recipient.html" class="footer-link">NGO Portal</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Platform</h4>
+        <ul class="footer-links">
+          <li><a href="impact.html" class="footer-link">Social Impact</a></li>
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="login.html" class="footer-link">Sign In</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">Emergency Dispatch</h4>
+        <p style="font-size: 0.875rem; color:#94A3B8;">
+          1800-425-ANNAM<br />
+          dispatch@annamfood.org
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 ANNAM Foundation. Live Tracking System.</div>
+      <div>Real-time LocalStorage synchronization across all browser tabs</div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script src="js/tracking.js"></script>
+</body>
+</html>
